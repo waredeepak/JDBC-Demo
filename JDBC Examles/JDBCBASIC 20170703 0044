@@ -1,0 +1,141 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.0.11-beta-nt
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema jdbc1
+--
+
+CREATE DATABASE IF NOT EXISTS jdbc1;
+USE jdbc1;
+
+--
+-- Definition of table `customer`
+--
+
+DROP TABLE IF EXISTS `customer`;
+CREATE TABLE `customer` (
+  `custid` int(10) unsigned NOT NULL auto_increment,
+  `custname` varchar(45) NOT NULL,
+  `custAddress` varchar(45) NOT NULL,
+  `custContact` varchar(45) NOT NULL,
+  PRIMARY KEY  (`custid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customer`
+--
+
+/*!40000 ALTER TABLE `customer` DISABLE KEYS */;
+/*!40000 ALTER TABLE `customer` ENABLE KEYS */;
+
+
+--
+-- Definition of table `emp`
+--
+
+DROP TABLE IF EXISTS `emp`;
+CREATE TABLE `emp` (
+  `code` int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(45) NOT NULL,
+  `city` varchar(45) NOT NULL,
+  `sal` double NOT NULL,
+  PRIMARY KEY  (`code`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `emp`
+--
+
+/*!40000 ALTER TABLE `emp` DISABLE KEYS */;
+INSERT INTO `emp` (`code`,`name`,`city`,`sal`) VALUES 
+ (1,'d','pune',21000);
+/*!40000 ALTER TABLE `emp` ENABLE KEYS */;
+
+
+--
+-- Definition of table `image`
+--
+
+DROP TABLE IF EXISTS `image`;
+CREATE TABLE `image` (
+  `name` varchar(45) default NULL,
+  `photo` blob
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `image`
+--
+
+/*!40000 ALTER TABLE `image` DISABLE KEYS */;
+/*!40000 ALTER TABLE `image` ENABLE KEYS */;
+
+
+--
+-- Definition of table `student`
+--
+
+DROP TABLE IF EXISTS `student`;
+CREATE TABLE `student` (
+  `rollNo` int(11) NOT NULL,
+  `Name` varchar(30) default NULL,
+  `Dob` varchar(20) default NULL,
+  `Course` varchar(20) default NULL,
+  PRIMARY KEY  (`rollNo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student`
+--
+
+/*!40000 ALTER TABLE `student` DISABLE KEYS */;
+INSERT INTO `student` (`rollNo`,`Name`,`Dob`,`Course`) VALUES 
+ (1,'Ram Kumar','10-02-1990','BTech'),
+ (2,'Shayam Kumar','15-05-1992','BTech'),
+ (3,'Ritu Kumari','4-07-1989','MCA'),
+ (4,'Suman Saurabh','12-12-1995','MCA'),
+ (5,'Suresh Sharma','10-11-1991','BTech');
+/*!40000 ALTER TABLE `student` ENABLE KEYS */;
+
+
+--
+-- Definition of table `student1`
+--
+
+DROP TABLE IF EXISTS `student1`;
+CREATE TABLE `student1` (
+  `id` int(10) NOT NULL,
+  `name` varchar(20) default NULL,
+  `address` varchar(20) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student1`
+--
+
+/*!40000 ALTER TABLE `student1` DISABLE KEYS */;
+/*!40000 ALTER TABLE `student1` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
